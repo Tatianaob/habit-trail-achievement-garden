@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useHabits } from '@/contexts/HabitContext';
 import HabitItem from '@/components/HabitItem';
@@ -16,7 +15,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { cn } from '@/lib/utils';
 
-const CATEGORIES = [
+const CATEGORIES: { value: HabitCategory; label: string }[] = [
   { value: 'health', label: 'Health' },
   { value: 'work', label: 'Work' },
   { value: 'personal', label: 'Personal' },

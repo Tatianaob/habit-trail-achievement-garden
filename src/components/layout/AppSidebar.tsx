@@ -17,7 +17,8 @@ import {
 import { cn } from '@/lib/utils';
 
 const AppSidebar = () => {
-  const { collapsed } = useSidebar();
+  const { state } = useSidebar();
+  const collapsed = state === 'collapsed';
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -47,7 +48,7 @@ const AppSidebar = () => {
         'border-r',
         collapsed ? 'w-16' : 'w-64'
       )}
-      collapsible
+      collapsible="icon"
     >
       <div className="p-4">
         <div className="flex items-center justify-between mb-8">
